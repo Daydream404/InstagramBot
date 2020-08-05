@@ -41,7 +41,7 @@ def likes():
         rndnum()
         driver.find_element_by_class_name("coreSpriteRightPaginationArrow").click()
         rndnum()
-
+        
 
 def logout():
     rndnum()
