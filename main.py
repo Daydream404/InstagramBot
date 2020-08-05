@@ -1,16 +1,19 @@
 from selenium import webdriver
 from time import sleep
+from selenium.webdriver.common.action_chains import ActionChains
 import random
 
 username = open("D:\\Python\\DiscordPyIG\\ig_name.txt", "r").read()
 password = open("D:\\Python\\DiscordPyIG\\ig_pass.txt", "r").read()
-hashtag = '#pythonprogramming'
+#hashtag = '#pythonprogramming'
+hashtag = '#codinglife'
 number = 0
 
 driver = webdriver.Chrome('D:/Python/DiscordPyIG/chromedriver')
 
 def rndnum():
-    number = random.uniform(2.1,8.1)
+    number = random.uniform(2.1,9.8)
+    print("Sleeping for",number, "sec")
     sleep(number)
 
 
@@ -36,12 +39,19 @@ def likes():
     rndnum()
     driver.find_element_by_class_name("eLAPa").click()
     rndnum()
-    for i in range(10):
-        driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div/div[3]/section[1]/span[1]/button').click()#like button
+    for i in range(35):
+        like = driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div/div[3]/section[1]/span[1]/button').click()#like button
         rndnum()
+        follow = driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div/header/div[2]/div[1]/div[2]/button').click()
+        rndnum()
+        try:
+            cancel = driver.find_element_by_xpath('/html/body/div[5]/div/div/div/div[3]/button[2]').click()
+            rndnum()
+        except:
+            pass
         driver.find_element_by_class_name("coreSpriteRightPaginationArrow").click()
         rndnum()
-        
+# TODO: button is not clickable why???
 
 def logout():
     rndnum()
