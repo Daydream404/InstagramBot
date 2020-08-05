@@ -6,7 +6,7 @@ import random
 username = open("D:\\Python\\DiscordPyIG\\ig_name.txt", "r").read()
 password = open("D:\\Python\\DiscordPyIG\\ig_pass.txt", "r").read()
 #hashtag = '#pythonprogramming'
-hashtag = '#codinglife'
+hashtag = '#programmer'
 number = 0
 
 driver = webdriver.Chrome('D:/Python/DiscordPyIG/chromedriver')
@@ -51,6 +51,11 @@ def likes():
             pass
         driver.find_element_by_class_name("coreSpriteRightPaginationArrow").click()
         rndnum()
+        
+    driver.find_element_by_xpath("/html/body/div[4]/div[3]/button").click()
+    rndnum()
+    driver.find_element_by_xpath("//a[contains(@href,'/{}')]".format(username)).click()
+
 # TODO: button is not clickable why???
 
 def logout():
@@ -64,4 +69,4 @@ def logout():
 
 main(username,password)
 likes()
-#logout()
+logout()
