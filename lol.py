@@ -23,12 +23,12 @@ import instaloader
 
 instg = instaloader.Instaloader()
 PROFILE = "discordpy"
-user = "discordpy"
-pswrd = ""
-instg.login(user, pswrd)
+instg.login("discordpy", "iMCXcu9zAbjE")
 profile = instaloader.Profile.from_username(instg.context, PROFILE)
 
-file = open("following.txt","a+")
+open('lol.txt', 'w').close()
+
+file = open("lol.txt","a+")
 for flwrs in profile.get_followees():
     username = flwrs.username
     file.write(username + "\n")
@@ -36,7 +36,7 @@ for flwrs in profile.get_followees():
 
 file.close()
 
-with open ('following.txt', 'rt') as myfile:
+with open ('lol.txt', 'rt') as myfile:
     contents = myfile.read()              
 
 
