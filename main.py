@@ -32,6 +32,18 @@ def main(username, password):
     rndnum()
 
 
+def followers():
+    driver.find_element_by_xpath('/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[3]/button').click()#settingsbtn
+    rndnum()
+    driver.find_element_by_xpath("//a[contains(@href,'/discordpy/')]").click()
+    rndnum()
+    driver.find_element_by_xpath("//a[contains(@href, '/discordpy/following/')]").click()
+    rndnum()
+    
+    
+
+
+
 def likes():
     driver.find_element_by_xpath("//input[@placeholder='Search']").send_keys(hashtag)
     rndnum()
@@ -56,7 +68,7 @@ def likes():
     rndnum()
     driver.find_element_by_xpath("//a[contains(@href,'/{}')]".format(username)).click()
 
-# TODO: button is not clickable why???
+
 
 def logout():
     rndnum()
@@ -68,5 +80,6 @@ def logout():
 
 
 main(username,password)
-likes()
-logout()
+followers()
+#likes()
+#logout()
