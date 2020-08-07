@@ -4,7 +4,7 @@
 
 
 
-![Selenium](https://img.shields.io/badge/Selenium-3.141.0-brightgreen?style=for-the-badge) ![Chrome](https://img.shields.io/badge/Chromedriver-84.0.4147.30-brightgreen?style=for-the-badge) ![Instaloader](https://img.shields.io/badge/Instaloader-4.4.5-brightgreen?style=for-the-badge&logo=instagram&link=https://github.com/instaloader/instaloader) ![Google](https://img.shields.io/badge/Google%20Chrome-84-brightgreen?style=for-the-badge&logo=google&link=https://www.google.com/chrome/&labelColor=292b33)
+![Selenium](https://img.shields.io/badge/Selenium-3.141.0-brightgreen?style=for-the-badge) ![Chrome](https://img.shields.io/badge/Chromedriver-84.0.4147.30-brightgreen?style=for-the-badge) ![Instaloader](https://img.shields.io/badge/Instaloader-4.4.5-brightgreen?style=for-the-badge&logo=instagram&link=https://github.com/instaloader/instaloader) ![Google](https://img.shields.io/badge/Google%20Chrome-84-brightgreen?style=for-the-badge&logo=google&link=https://www.google.com/chrome/&labelColor=000000)
 
 # Overview
 
