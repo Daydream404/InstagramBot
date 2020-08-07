@@ -1,13 +1,11 @@
 from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.action_chains import ActionChains
 import random
 import instaloader
 
 username = open("D:\\Python\\DiscordPyIG\\ig_name.txt", "r").read()
 password = open("D:\\Python\\DiscordPyIG\\ig_pass.txt", "r").read()
-#hashtag = '#pythonprogramming'
-hashtag = '#programmercommunity'
+hashtag = '#codingproblems'
 number = 0
 
 driver = webdriver.Chrome('D:/Python/DiscordPyIG/chromedriver')
@@ -33,57 +31,19 @@ def main(username, password):
     rndnum()
 
 
-def following():
-    instg = instaloader.Instaloader()
-    PROFILE = "discordpy"
-    username = "discordpy"
-    instg.login(username, password)
-    profile = instaloader.Profile.from_username(instg.context, PROFILE)
-
-    open('following.txt', 'w').close()
-
-    file = open("following.txt","a+")
-    for flwing in profile.get_followees():
-        username = flwing.username
-        file.write(username + "\n")
-
-    file.close()
-
-    with open ('following.txt', 'rt') as myfile:
-        ig_profiles = myfile.read()
-    
-
-
 def likes():
-    instg = instaloader.Instaloader()
-    PROFILE = "discordpy"
-    username = "discordpy"
-    instg.login(username, password)
-    profile = instaloader.Profile.from_username(instg.context, PROFILE)
-
-    open('following.txt', 'w').close()
-
-    file = open("following.txt","a+")
-    for flwing in profile.get_followees():
-        username = flwing.username
-        file.write(username + "\n")
-
-    file.close()
-
-    with open ('following.txt', 'rt') as myfile:
-        ig_profiles = myfile.read()
-
     driver.find_element_by_xpath("//input[@placeholder='Search']").send_keys(hashtag)
     rndnum()
     driver.find_element_by_class_name("z556c").click()
     rndnum()
     driver.find_element_by_class_name("eLAPa").click()
     rndnum()
-    for i in range(35):
+    for i in range(15):
         instg = instaloader.Instaloader()
+        instg.load_session_from_file("discordpy", "session-discordpy")
         PROFILE = "discordpy"
         username = "discordpy"
-        instg.login(username, password)
+        #instg.login(username, password)
         profile = instaloader.Profile.from_username(instg.context, PROFILE)
 
         open('following.txt', 'w').close()
@@ -112,8 +72,6 @@ def likes():
         rndnum()
         
     driver.find_element_by_xpath("/html/body/div[4]/div[3]/button").click()
-    rndnum()
-    driver.find_element_by_xpath("//a[contains(@href,'/{}')]".format(username)).click()
 
 
 def logout():
@@ -127,4 +85,4 @@ def logout():
 
 main(username,password)
 likes()
-#logout()
+logout()

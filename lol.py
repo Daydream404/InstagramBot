@@ -1,46 +1,10 @@
-'''with open ('lol.txt', 'rt') as myfile:
-    contents = myfile.read()              
-print(contents)
+import lyricsgenius
+import json
+import math
+from googlesearch import search
 
-if "Diane" in contents:
-    print("There is Poppy")
-else:
-    print("RIP")
-        
+query= "Tom Hanks"
+for i in search(query, num=10, start=0, stop=10, pause=2):
+    i1= i
 
-list = ['Daniel','lol', 'lol1']
-print(type(list))
-
-if "Daniel" in list:
-    print("DID")
-else:
-    print("RIP")
-
-'''
-
-
-import instaloader
-
-instg = instaloader.Instaloader()
-PROFILE = "discordpy"
-instg.login("discordpy", "iMCXcu9zAbjE")
-profile = instaloader.Profile.from_username(instg.context, PROFILE)
-
-open('lol.txt', 'w').close()
-
-file = open("lol.txt","a+")
-for flwrs in profile.get_followees():
-    username = flwrs.username
-    file.write(username + "\n")
-    print(username)
-
-file.close()
-
-with open ('lol.txt', 'rt') as myfile:
-    contents = myfile.read()              
-
-
-if "pycoders" in contents:
-    print("There is Poppy")
-else:
-    print("RIP")
+print(i1)
