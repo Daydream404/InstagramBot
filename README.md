@@ -17,6 +17,7 @@ This instagram bot can scrape some basic web information. It can log in to insta
 
 
 [Google Chrome][googlechrome]
+<br>
 [ChromeDriver][chromedriver]
 
 Tested on Chrome 84 and ChromeDriver 84.
