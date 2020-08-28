@@ -1,6 +1,6 @@
 
 <div align="center">
-<p style="font-size:35px;font-weight:600;">Instagram Bot</p>
+<p style="font-size:50px;font-weight:600;">Instagram Bot</p>
 
 
 <img align="center" src="https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/instagram-marketing-strategies-featured-image.jpg">
